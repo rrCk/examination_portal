@@ -299,8 +299,7 @@ class DB
             if(Integer.parseInt(s)>=Integer.parseInt(DB.semester))
             {
                 Dbstudent.flag=1;
-                System.out.println("error");
-                for(int i=0;i<=FmarkS.last;i++)
+                for(int i=0;i<=FmarkS.last+1;i++)
                 {
                     FmarkS.Tdata[i][0]="";
                     FmarkS.Tdata[i][1]="";
@@ -350,6 +349,12 @@ class DB
                         FmarkS.Tdata[i-2][0] = columnName;
                         FmarkS.Tdata[i-2][1] = rs.getString(i);
                         FmarkS.last = i-2;
+                    }
+
+                    for(i=FmarkS.last+1;i<=9;i++)
+                    {
+                        FmarkS.Tdata[i][0]="";
+                        FmarkS.Tdata[i][1]="";
                     }
                 }
              

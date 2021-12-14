@@ -23,15 +23,15 @@ class Fattendance
         //frame end
         
         //Icons start
-        Image icon = Toolkit.getDefaultToolkit().getImage("ic.png");
+        Image icon = Toolkit.getDefaultToolkit().getImage("C:\\Users\\chand\\chandra\\DBMSDATA\\ic.png");
         Fattendance.setIconImage(icon);
         
-        ImageIcon logop = new ImageIcon("mul.png");
+        ImageIcon logop = new ImageIcon("C:\\Users\\chand\\chandra\\DBMSDATA\\mul.png");
         JLabel logol1 = new JLabel(logop);
         logol1.setBounds(74,-22,205,205);
         Fattendance.add(logol1);
         
-        ImageIcon logo = new ImageIcon("mu.png");
+        ImageIcon logo = new ImageIcon("C:\\Users\\chand\\chandra\\DBMSDATA\\mu.png");
         JLabel logol = new JLabel(logo);
         logol.setBounds(130,0,947,137);
         Fattendance.add(logol);

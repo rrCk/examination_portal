@@ -17,7 +17,7 @@ class Fhome
         Fhome.getContentPane().setBackground(Color.BLACK);
         //Frame ending.
 
-        Image icon = Toolkit.getDefaultToolkit().getImage("ic.png");
+        Image icon = Toolkit.getDefaultToolkit().getImage("C:\\Users\\chand\\chandra\\DBMSDATA\\ic.png");
         Fhome.setIconImage(icon);
 
  
@@ -35,7 +35,7 @@ class Fhome
         Fhome.add(title2);
 
         //Logo label.
-        ImageIcon logo = new ImageIcon("logo.png");
+        ImageIcon logo = new ImageIcon("C:\\Users\\chand\\chandra\\DBMSDATA\\logo.png");
         JLabel logol = new JLabel(logo);
         logol.setBounds(40,130,312,157);
         Fhome.add(logol);

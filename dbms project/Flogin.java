@@ -15,7 +15,7 @@ class Flogin
         Flogin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         //Frame ending.
 
-        Image icon = Toolkit.getDefaultToolkit().getImage("ic.png");
+        Image icon = Toolkit.getDefaultToolkit().getImage("C:\\Users\\chand\\chandra\\DBMSDATA\\ic.png");
         Flogin.setIconImage(icon);
     
         JLabel title = new JLabel("EXAMINATION PORTAL");
@@ -25,12 +25,12 @@ class Flogin
         Flogin.add(title);
         
         //Logo label.
-        ImageIcon logo = new ImageIcon("logo.png");
+        ImageIcon logo = new ImageIcon("C:\\Users\\chand\\chandra\\DBMSDATA\\logo.png");
         JLabel logol = new JLabel(logo);
         logol.setBounds(743,200,312,157);
         Flogin.add(logol);
 
-        ImageIcon logo2 = new ImageIcon("col.jpg");
+        ImageIcon logo2 = new ImageIcon("C:\\Users\\chand\\chandra\\DBMSDATA\\col.jpg");
         JLabel logo12 = new JLabel(logo2);
         logo12.setBounds(100,200,400,410);
         Flogin.add(logo12);
@@ -123,7 +123,7 @@ class Flogin
         Felogin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         //Frame ending.
 
-        Image icon = Toolkit.getDefaultToolkit().getImage("ic.png");
+        Image icon = Toolkit.getDefaultToolkit().getImage("C:\\Users\\chand\\chandra\\DBMSDATA\\ic.png");
         Felogin.setIconImage(icon);
     
         JLabel title = new JLabel("EXAMINATION PORTAL");
@@ -133,12 +133,12 @@ class Flogin
         Felogin.add(title);
         
         //Logo label.
-        ImageIcon logo = new ImageIcon("logo.png");
+        ImageIcon logo = new ImageIcon("C:\\Users\\chand\\chandra\\DBMSDATA\\logo.png");
         JLabel logol = new JLabel(logo);
         logol.setBounds(743,200,312,157);
         Felogin.add(logol);
 
-        ImageIcon logo2 = new ImageIcon("col.jpg");
+        ImageIcon logo2 = new ImageIcon("C:\\Users\\chand\\chandra\\DBMSDATA\\col.jpg");
         JLabel logo12 = new JLabel(logo2);
         logo12.setBounds(100,200,400,410);
         Felogin.add(logo12);

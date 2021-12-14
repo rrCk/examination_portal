@@ -18,14 +18,14 @@ class Fcoursecontent
         //frame end
 
         //Icons start
-        Image icon = Toolkit.getDefaultToolkit().getImage("ic.png");
+        Image icon = Toolkit.getDefaultToolkit().getImage("C:\\Users\\chand\\chandra\\DBMSDATA\\ic.png");
         Fcoursecontent.setIconImage(icon);
 
-        ImageIcon logop = new ImageIcon("mul.png");
+        ImageIcon logop = new ImageIcon("C:\\Users\\chand\\chandra\\DBMSDATA\\mul.png");
         JLabel logol1 = new JLabel(logop);
         logol1.setBounds(74,-22,205,205);
         Fcoursecontent.add(logol1);
-        ImageIcon logo = new ImageIcon("mu.png");
+        ImageIcon logo = new ImageIcon("C:\\Users\\chand\\chandra\\DBMSDATA\\mu.png");
         JLabel logol = new JLabel(logo);
         logol.setBounds(130,0,947,137);
         Fcoursecontent.add(logol);
@@ -47,9 +47,8 @@ class Fcoursecontent
             {
                 Dbstudent.op = (String)cb.getSelectedItem();
                 Dbstudent.cc(Dbstudent.op.charAt(Dbstudent.op.length()-1));
-                Fcoursecontent.remove(ccl);
-                System.out.println(Dbstudent.cc);
                 
+                Fcoursecontent.remove(ccl);
                 ccl = new JLabel( new ImageIcon(Dbstudent.cc));
                 ccl.setBounds(200,200,800,500);
                 Fcoursecontent.add(ccl);

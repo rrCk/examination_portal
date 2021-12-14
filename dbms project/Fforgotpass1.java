@@ -13,15 +13,15 @@ class Fforgotpass1
         Fforgotpass1.setLayout(null);
 
         //Icons start
-        Image icon = Toolkit.getDefaultToolkit().getImage("ic.png");
+        Image icon = Toolkit.getDefaultToolkit().getImage("C:\\Users\\chand\\chandra\\DBMSDATA\\ic.png");
         Fforgotpass1.setIconImage(icon);
         
-        ImageIcon logop = new ImageIcon("mul.png");
+        ImageIcon logop = new ImageIcon("C:\\Users\\chand\\chandra\\DBMSDATA\\mul.png");
         JLabel logol1 = new JLabel(logop);
         logol1.setBounds(74,-22,205,205);
         Fforgotpass1.add(logol1);
         
-        ImageIcon logo = new ImageIcon("mu.png");
+        ImageIcon logo = new ImageIcon("C:\\Users\\chand\\chandra\\DBMSDATA\\mu.png");
         JLabel logol = new JLabel(logo);
         logol.setBounds(130,0,947,137);
         Fforgotpass1.add(logol);

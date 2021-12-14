@@ -17,43 +17,36 @@ class Fhallticket
         //frame end
 
         //Icons start
-        Image icon = Toolkit.getDefaultToolkit().getImage("ic.png");
+        Image icon = Toolkit.getDefaultToolkit().getImage("C:\\Users\\chand\\chandra\\DBMSDATA\\ic.png");
         Fhallticket.setIconImage(icon);
 
-        ImageIcon logop = new ImageIcon("mul.png");
+        ImageIcon logop = new ImageIcon("C:\\Users\\chand\\chandra\\DBMSDATA\\mul.png");
         JLabel logol1 = new JLabel(logop);
         logol1.setBounds(74,-22,205,205);
         Fhallticket.add(logol1);
-        ImageIcon logo = new ImageIcon("mu.png");
+        ImageIcon logo = new ImageIcon("C:\\Users\\chand\\chandra\\DBMSDATA\\mu.png");
         JLabel logol = new JLabel(logo);
         logol.setBounds(130,0,947,137);
         Fhallticket.add(logol);
 
-        ImageIcon ht;
-        if(ename.equals("Shreya Kuchibhatla"))
-        {
-            ht = new ImageIcon("sht.png");
-        }
-        else if(ename.equals("Singam Sai Akash"))
-        {
-            ht = new ImageIcon("aht.png");
-        }
-        else
-        {
-            ht = new ImageIcon("ht.jpg");
-        }
+        JLabel text = new JLabel("Download,fill and get it signed!!");
+        text.setBounds(475,180,250,20);
+        text.setFont(new Font("verdana",Font.PLAIN,15));
+        text.setForeground(Color.yellow);
+        Fhallticket.add(text);
+        ImageIcon ht = new ImageIcon("C:\\Users\\chand\\chandra\\DBMSDATA\\hallticket.png");
         JLabel ht2 = new JLabel(ht);
-        ht2.setBounds(360,155,484,420);
+        ht2.setBounds(200,210,800,450);
         Fhallticket.add(ht2);
         //ICons end
 
         //Button declaration
         JButton b1 = new JButton("DOWNLOAD");
-        b1.setBounds(402,610,150, 40);
+        b1.setBounds(402,680,150, 40);
         b1.setFont(new Font("MONOSPACED",Font.BOLD,20));
 
         JButton b2 = new JButton("HOME");
-        b2.setBounds(652,610,150, 40);
+        b2.setBounds(652,680,150, 40);
         b2.setFont(new Font("MONOSPACED",Font.BOLD,20));
         b2.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e)

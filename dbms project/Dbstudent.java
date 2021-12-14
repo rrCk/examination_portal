@@ -10,6 +10,7 @@ class Dbstudent
     static int flag = 0;
     static String attendance="";
     static String cc="";
+    static String tt="";
 
     public static void main(String args[])
     {
@@ -78,5 +79,28 @@ class Dbstudent
         DB.getcc(sem);
     }
 
+    public static void tt(char sem)
+    {
+        if(sem=='r')
+        {
+            Dbstudent.tt = "C:\\Users\\chand\\chandra\\DBMSDATA\\regular.png";
+        }
+        else if(sem=='1')
+        {
+            Dbstudent.tt = "C:\\Users\\chand\\chandra\\DBMSDATA\\supply_1.png";
+        }
+        else if(sem=='2')
+        {
+            Dbstudent.tt = "C:\\Users\\chand\\chandra\\DBMSDATA\\supply_2.png";
+        }
+        else if(sem=='3')
+        {
+            Dbstudent.tt = "C:\\Users\\chand\\chandra\\DBMSDATA\\supply_3.png";
+        }
+        else if(sem=='4')
+        {
+            Dbstudent.tt = "C:\\Users\\chand\\chandra\\DBMSDATA\\supply_4.png";
+        }
+    }
 
 }
