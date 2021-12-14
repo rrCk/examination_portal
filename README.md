@@ -1,2 +1,2 @@
 # examination_portal
-Portal to implement examination portal.
+Application to implement examination portal.
