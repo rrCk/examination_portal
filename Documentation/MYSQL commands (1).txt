@@ -1,0 +1,157 @@
+create database user_info;
+use user_info;
+create table data(id varchar(20), password varchar(20), phone varchar(20));
+alter table data add primary key(id);
+alter table data add unique index id_unique (id asc);
+
+insert into data (id,password,phone) values ('19XJ1A0101','CIVIL101','9849016921'), ('19XJ1A0102','CIVIL102','8790537095'), ('19XJ1A0103','CIVIL103','7674966541'), ('19XJ1A0104','CIVIL104','9947155678'), ('19XJ1A0105','CIVIL105','9291975641');
+insert into data (id,password,phone) values ('19XJ1A0211','ELECTRICAL211','8690950855'),('19XJ1A0212','ELECTRICAL212','8941462310'),('19XJ1A0213','ELECTRICAL213','7875921435'),('19XJ1A0214','ELECTRICAL214','9849001955'),('19XJ1A0215','ELECTRICAL215','9866613807');
+insert into data  (id,password,phone) values ('19XJ1A0321','MECHANICAL321','7789044565'),('19XJ1A0322','MECHANICAL322','8971429089'),('19XJ1A0323','MECHANICAL323','9095568066'),('19XJ1A0324','MECHANICAL324','8084523108'),('19XJ1A0325','MECHANICAL325','9846092871');
+insert into data (id,password,phone) values ('19XJ1A0531','COMPUTER531','9866033466'),('19XJ1A0532','COMPUTER532','8790379033'),('19XJ1A0533','COMPUTER533','9284042235'),('19XJ1A0534','COMPUTER534','8734090342'),('19XJ1A0535','COMPUTER535','8898978887');
+
+create database student;
+use student;
+create table student(id varchar(20),name varchar(25),email varchar(40),branch varchar(30), semester int);
+alter table student add primary key(id);
+alter table student add unique index id_unique (id asc);
+
+
+insert into student (id,name,email,branch,semester) values ('19XJ1A0101','ANISH','ANISH19101@mechyd.ac.in','CIVIL',5),('19XJ1A0102','RAHUL','RAHUL19102@mechyd.ac.in','CIVIL',5),('19XJ1A0103','AMIT','AMIT19103@mechyd.ac.in','CIVIL',5),('19XJ1A0104','PREETI','PREETI19104@mechyd.ac.in','CIVIL',5),('19XJ1A0105','KAJAL','KAJAL19105@mechyd.ac.in','CIVIL',5);
+insert into student (id,name,email,branch,semester) values ('19XJ1A0211','PRIYANKA','PRIYANKA19211@mechyd.ac.in','ELECTRICAL',5),('19XJ1A0212','SIDDHARTH','SIDDHARTH19212@mechyd.ac.in','ELECTRICAL',5),('19XJ1A0213','PARTHU','PARTHU19213@mechyd.ac.in','ELECTRICAL',5),('19XJ1A0214','AJAY','AJAY19214@mechyd.ac.in','ELECTRICAL',5),('19XJ1A0215','AISHWARYA','AISHWARYA19215@mechyd.ac.in','ELECTRICAL',5);
+insert into student (id,name,email,branch,semester) values ('19XJ1A0321','VARUN','VARUN19321@mechyd.ac.in','MECHANICAL',5),('19XJ1A0322','PAVAN','PAVAN19322@mechyd.ac.in','MECHANICAL',5),('19XJ1A0323','SMRITI','SMRITI19323@mechyd.ac.in','MECHANICAL',5),('19XJ1A0324','BHAVANA','BHAVANA19324@mechyd.ac.in','MECHANICAL',5),('19XJ1A0325','ROHIT','ROHIT19325@mechyd.ac.in','MECHANICAL',5);
+insert into student (id,name,email,branch,semester) values ('19XJ1A0531','CHANDRA','CHANDRA19531@mechyd.ac.in','COMPUTER_SCIENCE',5),('19XJ1A0532','AKASH','AKASH19532@mechyd.ac.in','COMPUTER_SCIENCE',5),('19XJ1A0533','SHREYA','SHREYA19533@mechyd.ac.in','COMPUTER_SCIENCE',5),('19XJ1A0534','PRANAV','PRANAV19534@mechyd.ac.in','COMPUTER_SCIENCE',5),('19XJ1A0535','RISHIKA','RISHIKA19535@mechyd.ac.in','COMPUTER_SCIENCE',5);
+
+
+create table attendance(id varchar(20),semester_1 int,semester_2 int,semester_3 int,semester_4 int,semester_5 int);
+alter table attendance add unique index id_unique (id asc);
+
+insert into attendance (id,semester_1,semester_2,semester_3,semester_4,semester_5) values ('19XJ1A0101',89,76,72,83,78),('19XJ1A0102',93,96,86,66,46),('19XJ1A0103',96,78,78,88,58),('19XJ1A0104',95,75,87,66,76),('19XJ1A0105',79,95,86,88,65);
+
+insert into attendance (id,semester_1,semester_2,semester_3,semester_4,semester_5) values ('19XJ1A0211',96,94,83,77,68),('19XJ1A0212',88,79,85,73,72),('19XJ1A0213',95,97,56,88,58),('19XJ1A0214',84,76,63,56,18),('19XJ1A0215',92,87,87,56,74);
+
+insert into attendance (id,semester_1,semester_2,semester_3,semester_4,semester_5) values ('19XJ1A0321',88,76,92,73,88),('19XJ1A0322',84,76,95,86,78),('19XJ1A0323',90,78,83,75,80),('19XJ1A0324',92,80,82,83,86),('19XJ1A0325',89,86,75,64,84);
+
+insert into attendance (id,semester_1,semester_2,semester_3,semester_4,semester_5) values ('19XJ1A0531',89,83,82,92,89),('19XJ1A0532',95,88,89,93,94),('19XJ1A0533',98,90,89,96,95),('19XJ1A0534',79,75,81,84,85),('19XJ1A0535',82,90,88,83,89);
+
+alter table attendance add  foreign key (id) references student(id);
+
+
+
+create table ce_1(id varchar(20),ma_101 varchar(10),ch_101 varchar(10),es_101 varchar(10),es_102 varchar(10),es_103 varchar(10),es_104 varchar(10),se_101 varchar(10),hs_101 varchar(10),fl_101 varchar(10));
+alter table ce_1 add unique index id_unique (id asc);
+
+insert into ce_1 (id,ma_101,ch_101,es_101,es_102,es_103,es_104,se_101,hs_101,fl_101) values ('19XJ1A0101','9','8','7','10','8','8','8','7','7'),('19XJ1A0102','8','10','7','9','8','7','8','8','7'),('19XJ1A0103','9','8','7','9','10','9','8','7','10'),('19XJ1A0104','10','8','7','10','8','9','8','8','9'),('19XJ1A0105','9','9','7','10','9','9','9','8','8');
+
+
+create table ee_1(id varchar(20),ma_101 varchar(10),ch_101 varchar(10),es_101 varchar(10),es_102 varchar(10),es_103 varchar(10),es_104 varchar(10),se_101 varchar(10),hs_101 varchar(10),fl_101 varchar(10));
+alter table ee_1 add unique index id_unique (id asc);
+
+insert into ee_1 (id,ma_101,ch_101,es_101,es_102,es_103,es_104,se_101,hs_101,fl_101) values ('19XJ1A0211','9','8','7','10','8','8','8','7','7'),('19XJ1A0212','8','10','7','9','8','7','8','8','7'),('19XJ1A0213','9','8','7','9','10','9','8','7','10'),('19XJ1A0214','10','8','7','10','8','9','8','8','9'),('19XJ1A0215','9','9','7','10','9','9','9','8','8');
+
+
+create table me_1(id varchar(20),ma_101 varchar(10),ch_101 varchar(10),es_101 varchar(10),es_102 varchar(10),es_103 varchar(10),es_104 varchar(10),se_101 varchar(10),hs_101 varchar(10),fl_101 varchar(10));
+alter table me_1 add unique index id_unique (id asc);
+
+insert into me_1 (id,ma_101,ch_101,es_101,es_102,es_103,es_104,se_101,hs_101,fl_101) values ('19XJ1A0321','9','8','7','10','8','8','8','7','7'),('19XJ1A0322','8','10','7','9','8','7','8','8','7'),('19XJ1A0323','9','8','7','9','10','9','8','7','10'),('19XJ1A0324','10','8','7','10','8','9','8','8','9'),('19XJ1A0325','9','9','7','10','9','9','9','8','8');
+
+
+create table ee_1(id varchar(20),ma_101 varchar(10),ch_101 varchar(10),es_101 varchar(10),es_102 varchar(10),es_103 varchar(10),es_104 varchar(10),se_101 varchar(10),hs_101 varchar(10),fl_101 varchar(10));
+alter table ee_1 add unique index id_unique (id asc);
+
+insert into ee_1 (id,ma_101,ch_101,es_101,es_102,es_103,es_104,se_101,hs_101,fl_101) values ('19XJ1A0211','9','8','7','10','8','8','8','7','7'),('19XJ1A0212','8','10','7','9','8','7','8','8','7'),('19XJ1A0213','9','8','7','9','10','9','8','7','10'),('19XJ1A0214','10','8','7','10','8','9','8','8','9'),('19XJ1A0215','9','9','7','10','9','9','9','8','8');
+
+
+create table cs_1(id varchar(20),ma_101 varchar(10),ch_101 varchar(10),es_101 varchar(10),es_102 varchar(10),es_103 varchar(10),es_104 varchar(10),se_101 varchar(10),hs_101 varchar(10),fl_101 varchar(10));
+alter table cs_1 add unique index id_unique (id asc);
+
+insert into cs_1 (id,ma_101,ch_101,es_101,es_102,es_103,es_104,se_101,hs_101,fl_101) values ('19XJ1A0531','9','8','7','10','8','8','8','7','7'),('19XJ1A0532','8','10','7','9','8','7','8','8','7'),('19XJ1A0533','9','8','7','9','10','9','8','7','10'),('19XJ1A0534','10','8','7','10','8','9','8','8','9'),('19XJ1A0535','9','9','7','10','9','9','9','8','8');
+
+
+
+create table ce_2(id varchar(20),ma_102 varchar(10),ch_102 varchar(10),ph_101 varchar(10),es_105 varchar(10),es_106 varchar(10),es_107 varchar(10),se_102 varchar(10),hs_102 varchar(10),fl_102 varchar(10));
+alter table ce_2 add unique index id_unique (id asc);
+
+insert into ce_2 (id,ma_102,ch_102,ph_101,es_105,es_106,es_107,se_102,hs_102,fl_102) values ('19XJ1A0101','8','9','7','8','8','8','9','9','7'),('19XJ1A0102','9','8','10','8','7','8','7','9','8'),('19XJ1A0103','9','8','6','10','8','9','9','8','10'),('19XJ1A0104','9','9','8','9','7','8','9','9','8'),('19XJ1A0105','10','10','8','8','7','9','9','8','8');
+
+create table ee_2(id varchar(20),ma_102 varchar(10),ch_102 varchar(10),ph_101 varchar(10),es_105 varchar(10),es_106 varchar(10),es_107 varchar(10),se_102 varchar(10),hs_102 varchar(10),fl_102 varchar(10));
+alter table ee_2 add unique index id_unique (id asc);
+
+insert into ee_2 (id,ma_102,ch_102,ph_101,es_105,es_106,es_107,se_102,hs_102,fl_102) values ('19XJ1A0211','8','9','7','8','8','8','9','9','7'),('19XJ1A0212','9','8','10','8','7','8','7','9','8'),('19XJ1A0213','9','8','6','10','8','9','9','8','10'),('19XJ1A0214','9','9','8','9','7','8','9','9','8'),('19XJ1A0215','10','10','8','8','7','9','9','8','8');
+
+create table me_2(id varchar(20),ma_102 varchar(10),ch_102 varchar(10),ph_101 varchar(10),es_105 varchar(10),es_106 varchar(10),es_107 varchar(10),se_102 varchar(10),hs_102 varchar(10),fl_102 varchar(10));
+alter table me_2 add unique index id_unique (id asc);
+
+insert into me_2 (id,ma_102,ch_102,ph_101,es_105,es_106,es_107,se_102,hs_102,fl_102) values ('19XJ1A0321','8','9','7','8','8','8','9','9','7'),('19XJ1A0322','9','8','10','8','7','8','7','9','8'),('19XJ1A0323','9','8','6','10','8','9','9','8','10'),('19XJ1A0324','9','9','8','9','7','8','9','9','8'),('19XJ1A0325','10','10','8','8','7','9','9','8','8');
+
+create table cs_2(id varchar(20),ma_102 varchar(10),ch_102 varchar(10),ph_101 varchar(10),es_105 varchar(10),es_106 varchar(10),es_107 varchar(10),se_102 varchar(10),hs_102 varchar(10),fl_102 varchar(10));
+alter table cs_2 add unique index id_unique (id asc);
+
+insert into cs_2 (id,ma_102,ch_102,ph_101,es_105,es_106,es_107,se_102,hs_102,fl_102) values ('19XJ1A0531','8','9','7','8','8','8','9','9','7'),('19XJ1A0532','9','8','10','8','7','8','7','9','8'),('19XJ1A0533','9','8','6','10','8','9','9','8','10'),('19XJ1A0534','9','9','8','9','7','8','9','9','8'),('19XJ1A0535','10','10','8','8','7','9','9','8','8');
+
+
+
+
+create table ce_3(id varchar(20),ma_203 varchar(10),ph_202 varchar(10),es_208 varchar(10),es_209 varchar(10),es_210 varchar(10),ce_201 varchar(10),fl_203 varchar(10));
+alter table ce_3 add unique index id_unique (id asc);
+
+insert into ce_3 (id,ma_203,ph_202,es_208,es_209,es_210,ce_201,fl_203) values ('19XJ1A0101','9','8','8','8','8','8','7'),('19XJ1A0102','10','9','8','7','8','8','7'),('19XJ1A0103','9','7','8','10','8','9','10'),('19XJ1A0104','9','8','8','9','10','9','8'),('19XJ1A0105','10','10','8','8','9','9','7');
+
+create table ee_3(id varchar(20),ma_203 varchar(10),ph_202 varchar(10),es_208 varchar(10),es_209 varchar(10),es_210 varchar(10),ee_201 varchar(10),fl_203 varchar(10));
+alter table ee_3 add unique index id_unique (id asc);
+
+insert into ee_3 (id,ma_203,ph_202,es_208,es_209,es_210,ee_201,fl_203) values ('19XJ1A0211','9','8','8','8','8','8','7'),('19XJ1A0212','10','9','8','7','8','8','7'),('19XJ1A0213','9','7','8','10','8','9','10'),('19XJ1A0214','9','8','8','9','10','9','8'),('19XJ1A0215','10','10','8','8','9','9','7');
+
+create table me_3(id varchar(20),ma_203 varchar(10),ph_202 varchar(10),es_208 varchar(10),es_209 varchar(10),es_210 varchar(10),me_201 varchar(10),fl_203 varchar(10));
+alter table me_3 add unique index id_unique (id asc);
+
+insert into me_3 (id,ma_203,ph_202,es_208,es_209,es_210,me_201,fl_203) values ('19XJ1A0321','9','8','8','8','8','8','7'),('19XJ1A0322','10','9','8','7','8','8','7'),('19XJ1A0323','9','7','8','10','8','9','10'),('19XJ1A0324','9','8','8','9','10','9','8'),('19XJ1A0325','10','10','8','8','9','9','7');
+
+create table cs_3(id varchar(20),ma_203 varchar(10),ph_202 varchar(10),es_208 varchar(10),es_209 varchar(10),es_210 varchar(10),cs_201 varchar(10),fl_203 varchar(10));
+alter table cs_3 add unique index id_unique (id asc);
+
+insert into cs_3 (id,ma_203,ph_202,es_208,es_209,es_210,cs_201,fl_203) values ('19XJ1A0531','9','8','8','8','8','8','7'),('19XJ1A0532','10','9','8','7','8','8','7'),('19XJ1A0533','9','7','8','10','8','9','10'),('19XJ1A0534','9','8','8','9','10','9','8'),('19XJ1A0535','10','10','8','8','9','9','7');
+
+
+
+create table ce_4(id varchar(20),es_211 varchar(10),ce_202 varchar(10),ce_203 varchar(10),ce_204 varchar(10),ce_205 varchar(10),ce_206 varchar(10),se_203 varchar(10),fl_204 varchar(10));
+alter table ce_4 add unique index id_unique (id asc);
+
+insert into ce_4 (id,es_211,ce_202,ce_203,ce_204,ce_205,ce_206,se_203,fl_204) values ('19XJ1A0101','9','9','10','7','9','8','9','7'),('19XJ1A0102','10','9','8','8','9','8','9','7'),('19XJ1A0103','10','8','7','9','7','8','9','10'),('19XJ1A0104','9','7','9','8','9','8','8','7'),('19XJ1A0105','10','9','7','8','8','8','9','7');
+
+create table ee_4(id varchar(20),es_211 varchar(10),ee_202 varchar(10),ee_203 varchar(10),ee_204 varchar(10),ee_205 varchar(10),ee_206 varchar(10),se_203 varchar(10),fl_204 varchar(10));
+alter table ee_4 add unique index id_unique (id asc);
+
+insert into ee_4 (id,es_211,ee_202,ee_203,ee_204,ee_205,ee_206,se_203,fl_204) values ('19XJ1A0211','9','9','10','7','9','8','9','7'),('19XJ1A0212','10','9','8','8','9','8','9','7'),('19XJ1A0213','10','8','7','9','7','8','9','10'),('19XJ1A0214','9','7','9','8','9','8','8','7'),('19XJ1A0215','10','9','7','8','8','8','9','7');
+
+create table me_4(id varchar(20),es_211 varchar(10),me_202 varchar(10),me_203 varchar(10),me_204 varchar(10),me_205 varchar(10),me_206 varchar(10),se_203 varchar(10),fl_204 varchar(10));
+alter table me_4 add unique index id_unique (id asc);
+
+insert into me_4 (id,es_211,me_202,me_203,me_204,me_205,me_206,se_203,fl_204)values ('19XJ1A0321','9','9','10','7','9','8','9','7'),('19XJ1A0322','10','9','8','8','9','8','9','7'),('19XJ1A0323','10','8','7','9','7','8','9','10'),('19XJ1A0324','9','7','9','8','9','8','8','7'),('19XJ1A0325','10','9','7','8','8','8','9','7');
+
+create table cs_4(id varchar(20),es_211 varchar(10),cs_202 varchar(10),cs_203 varchar(10),cs_204 varchar(10),cs_205 varchar(10),cs_206 varchar(10),se_203 varchar(10),fl_204 varchar(10));
+alter table cs_4 add unique index id_unique (id asc);
+
+insert into cs_4 (id,es_211,cs_202,cs_203,cs_204,cs_205,cs_206,se_203,fl_204)values ('19XJ1A0531','9','9','10','7','9','8','9','7'),('19XJ1A0532','10','9','8','8','9','8','9','7'),('19XJ1A0533','10','8','7','9','7','8','9','10'),('19XJ1A0534','9','7','9','8','9','8','8','7'),('19XJ1A0535','10','9','7','8','8','8','9','7');
+
+
+
+
+create table course_content(branch varchar(20)unique,semester_1 varchar(50),semester_2 varchar(50),semester_3 varchar(50),semester_4 varchar(50),semester_5 varchar(50),semester_6 varchar(50),semester_7 varchar(50),semester_8 varchar(50));
+
+
+Insert into course_content(branch,semester_1,semester_2,semester_3,semester_4,semester_5,semester_6,semester_7,semester_8) 
+values ('CIVIL','DBMSDATA\\CIVIL1.png','DBMSDATA\\CIVIL2.png','DBMSDATA\\CIVIL3.png','DBMSDATA\\CIVIL4.png','DBMSDATA\\CIVIL5.png','DBMSDATA\\CIVIL6.png','DBMSDATA\\CIVIL7.png','DBMSDATA\\CIVIL8.png');
+
+Insert into course_content(branch,semester_1,semester_2,semester_3,semester_4,semester_5,semester_6,semester_7,semester_8) 
+values ('ELECTRICAL','DBMSDATA\\CIVIL1.png','DBMSDATA\\CIVIL2.png','DBMSDATA\\EEE3.png','DBMSDATA\\EEE4.png','DBMSDATA\\EEE5.png','DBMSDATA\\EEE6.png','DBMSDATA\\EEE7.png','DBMSDATA\\EEE8.png');
+
+Insert into course_content(branch,semester_1,semester_2,semester_3,semester_4,semester_5,semester_6,semester_7,semester_8) 
+values ('MECHANICAL','DBMSDATA\\MECH1.png','DBMSDATA\\MECH2.png','DBMSDATA\\MECH3.png','DBMSDATA\\MECH4.png','DBMSDATA\\MECH5.png','DBMSDATA\\MECH6.png','DBMSDATA\\MECH7.png','DBMSDATA\\MECH8.png');
+
+Insert into course_content(branch,semester_1,semester_2,semester_3,semester_4,semester_5,semester_6,semester_7,semester_8) 
+values ('COMPUTER_SCIENCE','DBMSDATA\\CSE1.png','DBMSDATA\\CSE2.png','DBMSDATA\\CSE3.png','DBMSDATA\\CSE4.png','DBMSDATA\\CSE5.png','DBMSDATA\\CSE6.png','DBMSDATA\\CSE7.png','DBMSDATA\\CSE8.png');
+
+
+
+
+
